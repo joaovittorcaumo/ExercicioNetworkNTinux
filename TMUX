@@ -1,0 +1,10 @@
+tmux new -s sessao1
+Ctrl+b c (Create a new window)
+Ctrl+b % (Create another horizontal pane)
+Ctrl+b " (Create another vertical pane)
+Ctrl+b d (Detatch from current season)
+joaocaumo@JvCaumo:~$ tmux list-sessions
+sessao1: 2 windows (created Wed Jul 21 15:08:31 2021)
+joaocaumo@JvCaumo:~$ tmux attach -t sessao1
+[detached (from session essao1)]
+joaocaumo@JvCaumo:~$
