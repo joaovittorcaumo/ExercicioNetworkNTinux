@@ -50,4 +50,50 @@ Content-Type: text/html; charset=iso-8859-1
 
 joaocaumo@JvCaumo:~$ fping gmap.pucrs.br
 gmap.pucrs.br is alive
+joaocaumo@JvCaumo:~$ sudo ssh joaocaumo@localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:XXlKbPDgCShPMtDJjryD8cbh3an4PZKcqsmTnIvjrc8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.
+joaocaumo@localhost's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+23 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+21 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+joaocaumo@JvCaumo:~$ mkdir test
+joaocaumo@JvCaumo:~$ cd test
+joaocaumo@JvCaumo:~/test$ vim test.txt
+joaocaumo@JvCaumo:~$ cd ..
+joaocaumo@JvCaumo:~$ scp -r test joaocaumo@JvCaumo:/home
+joaocaumo@jvcaumo's password: 
+scp: /home/test: Permission denied
+joaocaumo@JvCaumo:~$ sudo scp -r test joaocaumo@JvCaumo:/home
+[sudo] password for joaocaumo: 
+The authenticity of host 'jvcaumo (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:XXlKbPDgCShPMtDJjryD8cbh3an4PZKcqsmTnIvjrc8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yess
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'jvcaumo' (ECDSA) to the list of known hosts.
+joaocaumo@jvcaumo's password: 
+Connection closed by 127.0.1.1 port 22
+lost connection
+joaocaumo@JvCaumo:~$ 
 
